@@ -17,5 +17,18 @@ public class Q23_strOccur {
     
             return -1;
         }
+
+        static int anotherSol (String haystack, String needle) {
+            if (needle.isEmpty()) {
+                return 0;
+            }
+
+            for(int i = 0, j = needle.length(); j<=haystack.length(); i++,j++){
+                if(haystack.substring(i,j).equals(needle)){
+                    return i;
+                }
+            }
+            return -1;
+        }
     }
 }
